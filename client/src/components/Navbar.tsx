@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { Menu, X, Wrench } from "lucide-react";
+import { Menu, X, Wrench, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "@/lib/LanguageContext";
+import { Button } from "@/components/ui/button";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +19,10 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "About", to: "about" },
-    { name: "Services", to: "services" },
-    { name: "Gallery", to: "gallery" },
-    { name: "Contact", to: "contact" },
+    { name: t("nav.about"), to: "about" },
+    { name: t("nav.services"), to: "services" },
+    { name: t("nav.gallery"), to: "gallery" },
+    { name: t("nav.contact"), to: "contact" },
   ];
 
   return (
@@ -42,10 +45,10 @@ export function Navbar() {
           </div>
           
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-center space-x-8">
               {navLinks.map((link) => (
                 <ScrollLink
-                  key={link.name}
+                  key={link.to}
                   to={link.to}
                   smooth={true}
                   duration={500}
@@ -54,18 +57,56 @@ export function Navbar() {
                   {link.name}
                 </ScrollLink>
               ))}
+              
+              <div className="flex items-center gap-2 border-l border-border pl-8">
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className={`px-2 h-8 ${language === "sr" ? "text-primary font-bold" : "text-muted-foreground"}`}
+                  onClick={() => setLanguage("sr")}
+                >
+                  SR
+                </Button>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className={`px-2 h-8 ${language === "en" ? "text-primary font-bold" : "text-muted-foreground"}`}
+                  onClick={() => setLanguage("en")}
+                >
+                  EN
+                </Button>
+              </div>
+
               <ScrollLink
                 to="contact"
                 smooth={true}
                 duration={500}
                 className="cursor-pointer bg-primary hover:bg-primary/90 text-white px-6 py-2 skew-x-[-12deg] inline-block transition-transform hover:-translate-y-1"
               >
-                <span className="skew-x-[12deg] inline-block font-bold uppercase text-sm">Book Now</span>
+                <span className="skew-x-[12deg] inline-block font-bold uppercase text-sm">{t("nav.book")}</span>
               </ScrollLink>
             </div>
           </div>
           
-          <div className="-mr-2 flex md:hidden">
+          <div className="-mr-2 flex items-center md:hidden gap-4">
+            <div className="flex items-center gap-1 bg-secondary/30 rounded-md p-1">
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className={`px-2 h-7 text-xs ${language === "sr" ? "bg-primary text-white" : "text-muted-foreground"}`}
+                onClick={() => setLanguage("sr")}
+              >
+                SR
+              </Button>
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className={`px-2 h-7 text-xs ${language === "en" ? "bg-primary text-white" : "text-muted-foreground"}`}
+                onClick={() => setLanguage("en")}
+              >
+                EN
+              </Button>
+            </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
@@ -87,7 +128,7 @@ export function Navbar() {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navLinks.map((link) => (
                 <ScrollLink
-                  key={link.name}
+                  key={link.to}
                   to={link.to}
                   smooth={true}
                   duration={500}
@@ -97,6 +138,15 @@ export function Navbar() {
                   {link.name}
                 </ScrollLink>
               ))}
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={500}
+                onClick={() => setIsOpen(false)}
+                className="cursor-pointer block px-3 py-4 text-center bg-primary text-white font-bold uppercase"
+              >
+                {t("nav.book")}
+              </ScrollLink>
             </div>
           </motion.div>
         )}
