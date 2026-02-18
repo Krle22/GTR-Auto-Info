@@ -1,7 +1,8 @@
 import { useMutation } from "@tanstack/react-query";
-import { api, type InsertInquiry } from "@shared/schema"; // Assuming shared export matches schema
+import { type InsertInquiry } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
+import { useLanguage } from "@/lib/LanguageContext";
 
 // Define schema locally if not exported from shared/routes yet or use what's available
 // Based on instructions, we use api contract. 
@@ -19,6 +20,7 @@ type InquiryFormValues = z.infer<typeof createInquirySchema>;
 
 export function useCreateInquiry() {
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   return useMutation({
     mutationFn: async (data: InquiryFormValues) => {
@@ -37,8 +39,8 @@ export function useCreateInquiry() {
     },
     onSuccess: () => {
       toast({
-        title: "Inquiry Sent",
-        description: "We'll get back to you shortly regarding your vehicle.",
+        title: t("toast.success.title"),
+        description: t("toast.success.desc"),
         variant: "default", 
         className: "bg-primary text-primary-foreground border-none"
       });
