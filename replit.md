@@ -70,4 +70,16 @@ Preferred communication style: Simple, everyday language.
 
 ### External Services
 - **Google Fonts**: Chakra Petch, Rajdhani, DM Sans, Fira Code, Geist Mono loaded via CDN
+- **Google Maps**: Embedded iframe in contact section showing GTR Auto location in Belgrade
 - No other third-party API integrations currently (no auth, no payment, no email sending)
+
+## TODO
+- **Email Notifications**: Set up Gmail integration to send inquiry notifications to sasa@autocentargtr.com when contact form is submitted. User needs to connect domain to Gmail first. Use the Gmail connector integration when ready. Inquiries are currently saved to database only.
+
+## Contact Details
+- **Email**: sasa@autocentargtr.com
+- **Phone**: +381 64 1105034
+- **Hours**: Mon-Sat 8:00-17:00, Sun: Closed
+- **Location**: GTR Auto, Belgrade (Google Maps embedded)
+- **Theme**: Black, white, and red accent
+- **Languages**: Serbian (default) and English with toggle in navbar
