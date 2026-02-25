@@ -259,7 +259,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold uppercase mb-1">{t("contact.visit")}</h3>
-                      <p className="text-gray-400">Ulica Brzog Servisa 123<br />Automobilska Zona, Beograd</p>
+                      <a href="https://www.google.com/maps/place/GTR+Auto/@44.7454368,20.4252399,1605m" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">GTR Auto, Beograd</a>
                     </div>
                   </div>
                   
@@ -269,7 +269,8 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold uppercase mb-1">{t("contact.call")}</h3>
-                      <p className="text-gray-400">+381 (0)11 123 4567<br />Pon-Pet: 08:00 - 18:00</p>
+                      <a href="tel:+381641105034" className="text-gray-400 hover:text-primary transition-colors">+381 64 1105034</a>
+                      <p className="text-gray-500 text-sm">{t("contact.hours.phone")}</p>
                     </div>
                   </div>
 
@@ -279,7 +280,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold uppercase mb-1">{t("contact.email")}</h3>
-                      <p className="text-gray-400">servis@gtrauto.rs</p>
+                      <a href="mailto:sasa@autocentargtr.com" className="text-gray-400 hover:text-primary transition-colors">sasa@autocentargtr.com</a>
                     </div>
                   </div>
 
@@ -289,21 +290,23 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold uppercase mb-1">{t("contact.hours")}</h3>
-                      <p className="text-gray-400">Pon - Pet: 08:00 - 18:00<br />Sub: 09:00 - 14:00</p>
+                      <p className="text-gray-400">{t("contact.hours.weekdays")}<br />{t("contact.hours.sunday")}</p>
                     </div>
                   </div>
                 </div>
               </Card>
               
-              <div className="w-full h-[250px] bg-secondary/30 border border-border rounded-lg flex items-center justify-center relative overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&h=400&fit=crop" 
-                  alt="Map Location" 
-                  className="w-full h-full object-cover opacity-50" 
+              <div className="w-full h-[300px] border border-border rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1605!2d20.4252399!3d44.7454368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a71007bf0d46b%3A0xc2e000274350b56f!2sGTR%20Auto!5e0!3m2!1sen!2srs!4v1700000000000"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="GTR Auto Location"
                 />
-                <div className="absolute bg-background/90 px-4 py-2 border border-primary text-primary font-bold uppercase tracking-wider text-sm">
-                  Beograd, Srbija
-                </div>
               </div>
             </div>
 
