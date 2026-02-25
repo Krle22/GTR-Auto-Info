@@ -15,7 +15,7 @@
   --popover: 240 10% 6%;
   --popover-foreground: 0 0% 95%;
 
-  --primary: 15 85% 55%;  /* Metallic Orange/Red */
+  --primary: 0 85% 50%;  /* Racing Red */
   --primary-foreground: 0 0% 100%;
 
   --secondary: 240 5% 15%;
@@ -32,7 +32,7 @@
 
   --border: 240 5% 15%;
   --input: 240 5% 15%;
-  --ring: 15 85% 55%;
+  --ring: 0 85% 50%;
 
   --radius: 0.25rem;
 
