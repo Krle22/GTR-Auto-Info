@@ -101,9 +101,10 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent z-10" />
           <div className="absolute inset-0 bg-black/40 z-10" />
           <img 
-            src={img5787}
+            src={img5783}
             alt="GTR Auto Workshop" 
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 40%' }}
           />
         </div>
 
