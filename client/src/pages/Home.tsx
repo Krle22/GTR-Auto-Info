@@ -15,6 +15,11 @@ import { Link as ScrollLink } from "react-scroll";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useLanguage } from "@/lib/LanguageContext";
+import img5779 from "@assets/IMG_5779_1783440568480.jpeg";
+import img5782 from "@assets/IMG_5782_1783440568504.jpeg";
+import img5783 from "@assets/IMG_5783_1783440568504.jpeg";
+import img5787 from "@assets/IMG_5787_1783440568505.jpeg";
+import imgOffice from "@assets/ChatGPT_Image_Jul_7,_2026,_06_07_08_PM_1783440568505.png";
 import { 
   Wrench, 
   Car, 
@@ -60,24 +65,29 @@ export default function Home() {
 
   const galleryImages = [
     {
-      url: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&h=800&fit=crop",
-      alt: "Workshop car",
-      caption: "Professional Service"
+      url: img5779,
+      alt: "GTR Auto exterior",
+      caption: "GTR Auto"
     },
     {
-      url: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&h=800&fit=crop",
-      alt: "Mechanic working",
-      caption: "Master Mechanics"
+      url: img5787,
+      alt: "GTR Auto aerial view",
+      caption: "Naša lokacija"
     },
     {
-      url: "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=1200&h=800&fit=crop",
-      alt: "Car inspection",
-      caption: "Detailed Inspection"
+      url: img5782,
+      alt: "GTR Auto workshop",
+      caption: "Radionica"
     },
     {
-      url: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1200&h=800&fit=crop",
-      alt: "Restoration",
-      caption: "Restoration"
+      url: img5783,
+      alt: "GTR Auto service",
+      caption: "Servis"
+    },
+    {
+      url: imgOffice,
+      alt: "GTR Auto office",
+      caption: "Recepcija"
     },
   ];
 
@@ -91,8 +101,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent z-10" />
           <div className="absolute inset-0 bg-black/40 z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1920&h=1080&fit=crop" 
-            alt="Hero Car" 
+            src={img5787}
+            alt="GTR Auto Workshop" 
             className="w-full h-full object-cover"
           />
         </div>
@@ -174,8 +184,8 @@ export default function Home() {
             >
               <div className="absolute inset-0 border-2 border-primary translate-x-4 translate-y-4 z-0" />
               <img 
-                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=1000&fit=crop" 
-                alt="Workshop Interior" 
+                src={img5782}
+                alt="GTR Auto Workshop Interior" 
                 className="relative z-10 w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />
             </motion.div>
