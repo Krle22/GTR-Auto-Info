@@ -103,7 +103,7 @@ export default function Home() {
           <img 
             src={img5787}
             alt="GTR Auto Workshop" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
         </div>
 
