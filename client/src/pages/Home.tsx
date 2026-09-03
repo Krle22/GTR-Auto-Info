@@ -15,11 +15,8 @@ import { Link as ScrollLink } from "react-scroll";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useLanguage } from "@/lib/LanguageContext";
-import img5779 from "@assets/IMG_5779_1783440568480.jpeg";
-import img5782 from "@assets/IMG_5782_1783440568504.jpeg";
-import img5783 from "@assets/IMG_5783_1783440568504.jpeg";
-import img5787 from "@assets/IMG_5787_1783440568505.jpeg";
-import imgOffice from "@assets/ChatGPT_Image_Jul_7,_2026,_06_07_08_PM_1783440568505.png";
+import headerImage from "@assets/DSC_0155.JPG";
+import liftsImage from "@assets/Dvostubne dizalice slika 1.jpeg";
 import { 
   Wrench, 
   Car, 
@@ -65,29 +62,14 @@ export default function Home() {
 
   const galleryImages = [
     {
-      url: img5779,
-      alt: "GTR Auto exterior",
+      url: headerImage,
+      alt: "GTR Auto",
       caption: "GTR Auto"
     },
     {
-      url: img5787,
-      alt: "GTR Auto aerial view",
-      caption: "Naša lokacija"
-    },
-    {
-      url: img5782,
-      alt: "GTR Auto workshop",
+      url: liftsImage,
+      alt: "Dvostubne dizalice",
       caption: "Radionica"
-    },
-    {
-      url: img5783,
-      alt: "GTR Auto service",
-      caption: "Servis"
-    },
-    {
-      url: imgOffice,
-      alt: "GTR Auto office",
-      caption: "Recepcija"
     },
   ];
 
@@ -101,7 +83,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent z-10" />
           <div className="absolute inset-0 bg-black/40 z-10" />
           <img 
-            src={img5783}
+            src={headerImage}
             alt="GTR Auto Workshop" 
             className="w-full h-full object-cover"
             style={{ objectPosition: 'center 40%' }}
@@ -185,7 +167,7 @@ export default function Home() {
             >
               <div className="absolute inset-0 border-2 border-primary translate-x-4 translate-y-4 z-0" />
               <img 
-                src={img5782}
+                src={liftsImage}
                 alt="GTR Auto Workshop Interior" 
                 className="relative z-10 w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />
