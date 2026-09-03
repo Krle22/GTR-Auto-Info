@@ -17,6 +17,11 @@ import Autoplay from "embla-carousel-autoplay";
 import { useLanguage } from "@/lib/LanguageContext";
 import headerImage from "@assets/DSC_0155.JPG";
 import liftsImage from "@assets/Dvostubne dizalice slika 1.jpeg";
+import img5779 from "@assets/IMG_5779_1783440568480.jpeg";
+import img5782 from "@assets/IMG_5782_1783440568504.jpeg";
+import img5783 from "@assets/IMG_5783_1783440568504.jpeg";
+import img5787 from "@assets/IMG_5787_1783440568505.jpeg";
+import imgOffice from "@assets/ChatGPT_Image_Jul_7,_2026,_06_07_08_PM_1783440568505.png";
 import { 
   Wrench, 
   Car, 
@@ -70,6 +75,31 @@ export default function Home() {
       url: liftsImage,
       alt: "Dvostubne dizalice",
       caption: "Radionica"
+    },
+    {
+      url: img5779,
+      alt: "GTR Auto exterior",
+      caption: "GTR Auto"
+    },
+    {
+      url: img5787,
+      alt: "GTR Auto aerial view",
+      caption: "Naša lokacija"
+    },
+    {
+      url: img5782,
+      alt: "GTR Auto workshop",
+      caption: "Radionica"
+    },
+    {
+      url: img5783,
+      alt: "GTR Auto service",
+      caption: "Servis"
+    },
+    {
+      url: imgOffice,
+      alt: "GTR Auto office",
+      caption: "Recepcija"
     },
   ];
 
