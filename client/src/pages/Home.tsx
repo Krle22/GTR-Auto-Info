@@ -270,7 +270,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold uppercase mb-1">{t("contact.visit")}</h3>
-                      <a href="https://www.google.com/maps/place/GTR+Auto/@44.7454368,20.4252399,1605m" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">GTR Auto, Beograd</a>
+                      <a href="https://www.google.com/maps/place/GTR+Auto/@44.7454368,20.4252399,724m/data=!3m2!1e3!4b1!4m6!3m5!1s0x475a71007bf0d46b:0xc2e000274350b56f!8m2!3d44.7454368!4d20.4278148!16s%2Fg%2F11y69hwc91?entry=ttu&g_ep=EgoyMDI2MDkwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">GTR Auto, Beograd</a>
                     </div>
                   </div>
                   
